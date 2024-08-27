@@ -4,6 +4,13 @@
 # make sure we're in MusicBot directory...
 cd "$(dirname "${BASH_SOURCE[0]}")" || { echo "Could not change directory to MusicBot."; exit 1; }
 
+# Check if pip is installed
+if ! command -v pip > /dev/null 2>&1 ; then
+    echo "pip not found. Installing pip..."
+    curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+    python3 get-pip.py
+fi
+
 pip install -r requirements.txt
 
 python3 --version
