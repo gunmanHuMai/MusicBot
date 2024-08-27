@@ -4,6 +4,10 @@
 # make sure we're in MusicBot directory...
 cd "$(dirname "${BASH_SOURCE[0]}")" || { echo "Could not change directory to MusicBot."; exit 1; }
 
+pip install -r requirements.txt
+
+python3 --version
+
 # Suported versions of python using only major.minor format
 PySupported=("3.8" "3.9" "3.10" "3.11" "3.12")
 
