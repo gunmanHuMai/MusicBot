@@ -4,6 +4,8 @@
 # make sure we're in MusicBot directory...
 cd "$(dirname "${BASH_SOURCE[0]}")" || { echo "Could not change directory to MusicBot."; exit 1; }
 
+export PATH="/python312/bin:$PATH"
+
 # Check if pip is installed
 if ! command -v pip > /dev/null 2>&1 ; then
     echo "pip not found. Installing pip..."
